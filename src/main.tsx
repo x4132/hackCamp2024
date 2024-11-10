@@ -1,10 +1,28 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import Root from './Root.tsx'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AppShellMain from './components/AppShellMain.tsx'
+
+import "@mantine/core/styles.css";
+import { MantineProvider, createTheme } from "@mantine/core";
+
+const theme = createTheme({
+    fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif'
+})
+
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+    <StrictMode>
+        <MantineProvider defaultColorScheme='dark' theme={theme} >
+            <AppShellMain>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Root />} />
+                    </Routes>
+                </BrowserRouter>
+            </AppShellMain>
+        </MantineProvider>
+    </StrictMode>,
 )
