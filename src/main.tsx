@@ -8,6 +8,7 @@ import AppShellMain from './components/AppShellMain.tsx'
 import "@mantine/core/styles.css";
 import { MantineProvider, createTheme } from "@mantine/core";
 import Login from './Login.tsx'
+import Swipe from './Swipe.tsx'
 
 const theme = createTheme({
     fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')!).render(
                     <Routes>
                         <Route path="/" element={<Root />} />
                         <Route path="/login" element={<Login />} />
+                        <Route path="/swipe" element={<Swipe />}/>
                     </Routes>
                 </AppShellMain>
             </MantineProvider>
