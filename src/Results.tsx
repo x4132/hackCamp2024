@@ -1,4 +1,4 @@
-import { Flex } from "@mantine/core";
+import { Flex, Input } from "@mantine/core";
 
 export default function Results() {
     return (
@@ -6,10 +6,19 @@ export default function Results() {
             pos="fixed"
             w="100vw"
             top="0"
-            bg="white"
+            bg="dark"
             style={{ zIndex: 100 }}
             direction="column">
-            
+            <Flex mih="16vh"
+                bg="#2E2E2E"
+                justify="center"
+                align="center"
+            >
+                <Input size="xl"
+                    radius="lg"
+                    
+                    placeholder="<ai summary of search>" />
+            </Flex>
         </Flex>
     )
 }
