@@ -21,11 +21,11 @@
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 
-Traditional job search platforms can be overwhelming, impersonal, and often fail to highlight inclusivity and accessibility. Many candidates, particularly those from underrepresented backgrounds, struggle to find opportunities that align with their skills, values, and unique needs, while employers miss out on diverse talent. This disconnect limits the potential for inclusive workplaces and diverse teams. Our solution aims to bridge this gap by creating an intuitive, AI-powered platform that matches job seekers and employers based on mutual fit, fostering accessible and meaningful employment connections.
+Traditional job platforms can be impersonal and often overlook inclusivity. Many candidates, especially from underrepresented backgrounds, struggle to find opportunities that align with their skills and values. Our solution is an AI-powered, swipe-based app that connects job seekers and employers based on a mutual fit, promoting accessible and inclusive hiring.
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-Our solution is a swipe-based mobile app that leverages AI to intelligently match job seekers and employers, focusing on creating an inclusive and accessible job search experience. Users can browse opportunities or potential candidates with simple swipe actions, allowing for fast, intuitive interactions. The AI analyzes skills, experience, and preferences, along with diversity and accessibility needs, to recommend high-quality matches that align with both the candidate’s and employer’s values. By integrating customizable search filters and inclusive design features, the platform empowers users from all backgrounds to find roles or talent that truly fits.
+The solution is an AI-powered, swipe-based job matching app that connects candidates and employers based on skills, values, and inclusivity. It simplifies hiring, helping diverse talent find suitable roles and employers to build inclusive teams, all within an accessible, user-friendly platform.
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
