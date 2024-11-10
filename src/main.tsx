@@ -7,22 +7,28 @@ import AppShellMain from './components/AppShellMain.tsx'
 
 import "@mantine/core/styles.css";
 import { MantineProvider, createTheme } from "@mantine/core";
+import Login from './Login.tsx'
 
 const theme = createTheme({
-    fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif'
+    fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
+    headings: {
+        fontWeight: "400",
+        fontFamily: "Inter"
+    }
 })
 
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <MantineProvider defaultColorScheme='dark' theme={theme} >
-            <AppShellMain>
-                <BrowserRouter>
+        <BrowserRouter>
+            <MantineProvider defaultColorScheme='dark' theme={theme} >
+                <AppShellMain>
                     <Routes>
                         <Route path="/" element={<Root />} />
+                        <Route path="/login" element={<Login />} />
                     </Routes>
-                </BrowserRouter>
-            </AppShellMain>
-        </MantineProvider>
+                </AppShellMain>
+            </MantineProvider>
+        </BrowserRouter>
     </StrictMode>,
 )

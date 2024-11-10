@@ -1,8 +1,10 @@
 import { AppShell, Burger, Group, Title } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { useLocation, useRoutes } from "react-router-dom";
 
 export default function AppShellMain({ children }: { children: React.ReactNode }) {
     const [opened, { toggle }] = useDisclosure();
+    const location = useLocation();
 
     return (
         <AppShell
@@ -13,10 +15,10 @@ export default function AppShellMain({ children }: { children: React.ReactNode }
                 breakpoint: "sm"
             }}
         >
-            <AppShell.Header bg={"rgba(0,0,0,0.5)"}>
+            <AppShell.Header bg={`rgba(0,0,0,${location.pathname === "/" ? 0 : 0.5})`}>
                 <Group h="100%" px="md">
 
-                    <Title order={1} fs="italic" className="logo" >
+                    <Title order={1} fs="italic" className="logo" display={location.pathname === "/" ? "none" : "inline"} >
                         Quikk
                     </Title>
 
