@@ -9,6 +9,7 @@ import "@mantine/core/styles.css";
 import { MantineProvider, createTheme } from "@mantine/core";
 import Login from './Login.tsx'
 import Results from './Results.tsx'
+import Search from './Search.tsx'
 
 const theme = createTheme({
     fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')!).render(
                         <Route path="/" element={<Root />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/results" element={<Results />}/>
+                        <Route path="/search" element={<Search />} />
                     </Routes>
                 </AppShellMain>
             </MantineProvider>
