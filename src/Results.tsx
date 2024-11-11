@@ -13,13 +13,9 @@ function getCard({ dragPosition, dragOrigin, card }: { dragPosition: number, dra
             </Card.Section>
 
             <Group>
-                <Title order={1} mt={4} >John Doe</Title>
+                <Title order={1} mt={4} >Alex Taylor</Title>
                 <Text ms="auto" size="xl">Photographer</Text>
             </Group>
-            <Group mt={8}>
-                <Badge color="yellow">Top Rated</Badge>
-            </Group>
-
             <Text ta="justify" mt="md">
                 Alex Taylor is a talented photographer based in Vancouver, BC, with over a decade of experience in capturing stunning landscapes, expressive portraits, and dynamic event photography. Inspired by the natural beauty of the Pacific Northwest, Alex excels in showcasing the region's breathtaking vistas. Known for a keen eye and creative approach, Alex brings out the unique personality of each subject in portrait sessions. With a knack for capturing the essence of events, Alex provides clients with a comprehensive visual story of their special occasions.
             </Text>
@@ -75,7 +71,7 @@ export default function Results() {
         } else {
             if (dragPosition < -60) {
                 setCard(prev => (prev + 1));
-            } else {
+            } else if (dragPosition > 60) {
                 navigate("/freelancers?freelancer=" + cards);
             }
             setDragPosition(0);
