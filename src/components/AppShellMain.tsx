@@ -1,6 +1,6 @@
 import { AppShell, Burger, Group, Title } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { useLocation, useRoutes } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function AppShellMain({ children }: { children: React.ReactNode }) {
     const [opened, { toggle }] = useDisclosure();
