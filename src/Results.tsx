@@ -1,6 +1,6 @@
-import { Flex, TextInput } from "@mantine/core";
+import { Image, Card, Flex, Space, TextInput, Text } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
-
+import Icon from "./assets/person-circle.svg";
 export default function Results() {
     return (
         <Flex mih="100vh"
@@ -27,6 +27,24 @@ export default function Results() {
                     />
 
             </Flex>
+
+            <Card style={{ alignSelf: "center" }} w={"80%"} bg={"#42464B"}>
+      <Image radius="md" src={Icon} />
+      <Flex direction="row">
+        <Flex w={"50%"} direction={"column"}>
+          <Text fz={"xl"}>Eileen</Text>
+          <Text>Digital Artist</Text>
+        </Flex>
+
+        <Text w={"50%"} style={{ textAlign: "right" }}>
+          Vancouver
+        </Text>
+      </Flex>
+      <Space h={"xl"}></Space>
+    </Card>
         </Flex>
     )
 }
+
+
+
