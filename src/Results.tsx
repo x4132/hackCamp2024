@@ -1,4 +1,4 @@
-import { Flex, Input } from "@mantine/core";
+import { Flex, TextInput } from "@mantine/core";
 
 export default function Results() {
     return (
@@ -6,7 +6,7 @@ export default function Results() {
             pos="fixed"
             w="100vw"
             top="0"
-            bg="black"
+            bg="#15191E"
             style={{ zIndex: 100 }}
             direction="column">
             <Flex mih="16vh"
@@ -14,23 +14,18 @@ export default function Results() {
                 justify="center"
                 align="center"
             >
-                <Input size="xl"
-                    radius="lg"
-                    variant="filled"
-                    c="white"
-                    placeholder="<ai summary of search>" />
+                <TextInput
+                    w="1000vw"
+                    h="10vh"
+                    pl="20px"
+                    pr="20px"
+                    placeholder="<ai summary of search>" 
+                    radius="lg" 
+                    variant="filled" 
+                    pt="70px"
+                    />
+
             </Flex>
-            <Card></Card>
-            
         </Flex>
     )
-}
-
-const Card = () => {
-    return (
-    <Flex direction="column"
-          justify="center"
-          align="center">
-        card
-    </Flex>)
 }
