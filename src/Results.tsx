@@ -6,7 +6,7 @@ export default function Results() {
             pos="fixed"
             w="100vw"
             top="0"
-            bg="dark"
+            bg="black"
             style={{ zIndex: 100 }}
             direction="column">
             <Flex mih="16vh"
@@ -16,9 +16,21 @@ export default function Results() {
             >
                 <Input size="xl"
                     radius="lg"
-                    
+                    variant="filled"
+                    c="white"
                     placeholder="<ai summary of search>" />
             </Flex>
+            <Card></Card>
+            
         </Flex>
     )
+}
+
+const Card = () => {
+    return (
+    <Flex direction="column"
+          justify="center"
+          align="center">
+        card
+    </Flex>)
 }
