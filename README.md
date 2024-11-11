@@ -2,7 +2,7 @@
   <a href="" rel="noopener">
  <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/462457650_959999656160477_2904357626097737461_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=75d36f&_nc_ohc=z6tACT7-vtwQ7kNvgEAoOVf&_nc_zt=23&_nc_ht=scontent-sea1-1.xx&_nc_gid=Ajh-ZJ5ZSm1YaEx2aw0Pvif&oh=00_AYAaM1y2hijHNDTKy_d76lsZvTNjxKMUrbZ5PpAeY0Vq-g&oe=6736C93F" alt="Project logo"></a>
 </p>
-<h3 align="center">App Name: Quikk</h3>
+<h3 align="center">Quikk</h3>
 
 
 ---
