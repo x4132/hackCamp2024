@@ -33,7 +33,7 @@ export default function AppShellMain({ children }: { children: React.ReactNode }
                 </Group>
             </AppShell.Header>
             <AppShell.Navbar></AppShell.Navbar>
-            <AppShell.Main>
+            <AppShell.Main h="100%" >
                 {children}
             </AppShell.Main>
         </AppShell>

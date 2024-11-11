@@ -1,14 +1,57 @@
-import { Flex, Group, Text, Title } from "@mantine/core"
+import { Button, Flex, Group, MantineTransition, Text, Title, Transition } from "@mantine/core"
+import { IconBrandAppleFilled } from "@tabler/icons-react";
 
 import bgVideo from "./assets/bg.mp4";
+import { useEffect, useState } from "react";
 
-export const thingsToDo = ["Kitchen Remodel", "Landscaping", "New Computer", "Photo Edits", "Proposal", "Wedding"];
+let timeout: number;
 
 function App() {
+    const thingsToDo = ["Kitchen Remodel", "Landscaping", "New Computer", "Photo Edits", "Taxes", "Wedding", "Printer"];
+    const carouselTransition: MantineTransition = {
+        in: {
+            transformOrigin: "bottom",
+            transform: "translateY(0%)",
+            opacity: 1
+        },
+        out: {
+            opacity: 0,
+            transform: "translateY(100%)",
+            transitionDuration: "0ms",
+        },
+        common: {
+            transformOrigin: "bottom",
+            opacity: 1
+        },
+
+
+        transitionProperty: "transform, opacity"
+    }
+
+    const [counter, setCounter] = useState<number>(0);
+    const [transform, setTransform] = useState(false);
+
+    useEffect(() => {
+        const intervalDelay = 5000;
+        setCounter(prev => (prev + 1));
+        setTransform(true);
+        setInterval(() => setTransform(false), intervalDelay - 25);
+        timeout = setInterval(() => {
+            setTransform(true);
+            setCounter(prev => (prev + 1));
+            setTimeout(() => {
+                setTransform(false);
+            }, intervalDelay - 25)
+        }, intervalDelay)
+
+        return () => {
+            clearInterval(timeout);
+        }
+    }, [setCounter, setTransform])
 
     return (
         <>
-            <Flex direction="column" p="sm" gap="xl">
+            <Flex direction="column" p="sm" gap={{ sm: "xl", md: "md" }} h="100%" >
                 <Title order={1} fs="italic" size="96" className="logo" >Quikk</Title>
 
                 <Flex direction="column" gap="none" lh="xs" my="xl" >
@@ -16,14 +59,45 @@ function App() {
                 </Flex>
 
 
-                <Group gap="0" align="start">
-                    <Text>
+                <Group gap="0" align="start" fz={{ sm: "md", md: "xl" }} mih="64px" >
+                    <Text fz={{ sm: "md", md: "xl" }}>
                         Get Help with your&nbsp;
                     </Text>
                     <Flex direction="column" id="thingsToDo" >
-                        {thingsToDo.map(thing => (<Text>{thing}</Text>))}
+                        <Transition
+                            mounted={transform}
+                            transition={carouselTransition}
+                            duration={500}
+                            timingFunction="ease"
+                        >
+                            {(styles) => <div style={styles}>{thingsToDo[counter % thingsToDo.length]}</div>}
+                        </Transition>
+                        <Transition
+                            mounted={transform}
+                            transition={carouselTransition}
+                            duration={500}
+                            timingFunction="ease"
+                        >
+                            {(styles) => <div style={styles}>{thingsToDo[(counter + 1) % thingsToDo.length]}</div>}
+                        </Transition>
                     </Flex>
                 </Group>
+
+                <Button mt={35} variant="white" c="dark" w={{ md: "25%" }} p="md" miw="12rem" size="32" radius="xl" mih="72px">
+                    Try for Free
+                </Button>
+            </Flex>
+
+            <Flex direction="column" display={{ sm: "flex", md: "none" }} pos="fixed" bottom="0" w="100%" p="sm" gap="sm" align="center" >
+                <Button variant="white" c="dark" mb="0" fullWidth w={{ md: "50%", lg: "25%" }} leftSection={<IconBrandAppleFilled />} >
+                    Sign in with Apple
+                </Button>
+                <Button variant="white" c="dark" fullWidth w={{ md: "50%", lg: "25%" }} >
+                    Sign Up
+                </Button>
+                <Button color="dark" fullWidth w={{ md: "50%", lg: "25%" }}>
+                    Log In
+                </Button>
             </Flex>
 
             <video autoPlay muted disablePictureInPicture disableRemotePlayback x-webkit-airplay="deny" aria-label="Video of workers using Quikk to make money" loop playsInline
