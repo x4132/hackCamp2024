@@ -41,7 +41,6 @@ export default function AppShellMain({ children }: { children: React.ReactNode }
                         onClick={toggle}
                         hiddenFrom="sm"
                         size="sm"
-                        ml="auto"
                     />
 
                 </Group>

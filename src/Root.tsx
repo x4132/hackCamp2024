@@ -3,9 +3,9 @@ import { IconBrandAppleFilled } from "@tabler/icons-react";
 
 import bgVideo from "./assets/bg.mp4";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-let timeout: number;
+let timeout: NodeJS.Timeout;
 
 function App() {
     const thingsToDo = ["Kitchen Remodel", "Landscaping", "New Computer", "Photo Edits", "Taxes", "Wedding", "Printer"];
