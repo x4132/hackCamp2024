@@ -8,7 +8,7 @@ export default function Search() {
     const navigate = useNavigate();
 
     function searchIt(query: string) {
-        let params = new URLSearchParams();
+        const params = new URLSearchParams();
         params.set("query", query);
         navigate("/results?" + params.toString());
     }
