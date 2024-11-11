@@ -4,6 +4,7 @@
 </p>
 <h3 align="center">Quikk</h3>
 
+[Try it out HERE!](https://quikk.x4132.dev/)
 
 ---
 
