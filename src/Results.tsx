@@ -37,7 +37,13 @@ function getCard({ dragPosition, dragOrigin, card }: { dragPosition: number, dra
             <Text ta="justify" mt="md">
                 John Doe is a highly skilled photographer based in Vancouver, BC, with over a decade of experience specializing in landscape, portrait, and event photography. Inspired by the stunning natural beauty of British Columbia, John excels in capturing breathtaking landscapes and has a keen eye for creating compelling portraits that reveal the unique personalities of his subjects. His unobtrusive style and attention to detail make him a sought-after event photographer, adept at documenting weddings, corporate events, and community gatherings. John's work has been featured in various publications and exhibitions, and he remains committed to delivering high-quality images that exceed client expectations.
             </Text>
+        </>,
+        <>
+            <Group>
+                <Title order={1} mt={4} >No more results found.</Title>
+            </Group>
         </>
+
     ]
 
     return cards[card];
@@ -95,6 +101,9 @@ export default function Results() {
         const params = new URLSearchParams(location.search);
         setInput(params.get("query") || "");
         setQuery(params.get("query") || "");
+        if (params.get("query") !== "Photographers") {
+            setCard(2);
+        }
     }, [location, setInput])
 
     let dragOrigin;
