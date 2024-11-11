@@ -35,6 +35,8 @@ With the limited time, there was only so much we could implement; currently this
 
 - [React](https://react.dev/) - Frontend Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Mantine](https://mantine.dev/) - Reach Component Library
+- [GPT-4o](https://openai.com/index/hello-gpt-4o/) - Search Functionality
 
 ## ✍️ Authors <a name = "authors"></a>
 
