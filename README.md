@@ -7,7 +7,7 @@
 
 ---
 
-<p align="center"> Our app reimagines the job search experience, using a familiar, swipe-based interface to connect job seekers with potential employers. Powered by AI, the platform matches candidates and employers based on skills, experience, and values, prioritizing inclusivity, accessibility, and diversity. By simplifying the search process and fostering meaningful connections, our app aims to make hiring and job-seeking more accessible and equitable for everyone.
+<p align="center"> Our app reimagines the job search experience, using a familiar, swipe-based interface to connect job seekers with potential employers. Powered by AI, the platform matches candidates and employers based on skills, experience, and values, prioritizing accessibility, and diversity. By simplifying the search process and fostering meaningful connections, our app aims to make hiring and job-seeking more accessible and equitable for everyone.
     <br> 
 </p>
 
