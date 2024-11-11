@@ -26,10 +26,12 @@ export default function AppShellMain({ children }: { children: React.ReactNode }
                         </Title>
                     </Link>
 
+                    {sessionStorage.getItem("loggedIn") === "true" ?
+                        <Avatar component="button" style={{ cursor: "pointer" }} ml="auto" variant="subtle" size="md" radius="xl" px="xs" onClick={() => navigate("/account")}>
+                            <IconUser />
+                        </Avatar>
+                        : null}
 
-                    <Avatar component="button" style={{ cursor: "pointer" }} ml="auto" variant="subtle" size="md" radius="xl" px="xs" onClick={() => navigate("/account")}>
-                        <IconUser />
-                    </Avatar>
 
                     <Burger
                         opened={opened}

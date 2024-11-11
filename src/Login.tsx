@@ -3,9 +3,17 @@ import IconEmail from "./assets/email-icon.svg";
 import IconApple from "./assets/apple-icon.svg";
 import IconGoogle from "./assets/google-icon.png";
 import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import loggedIn from "./components/loggedIn";
 
 export default function Login() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (loggedIn()) {
+            navigate("/search");
+        }
+    }, [navigate])
 
     function login() {
         sessionStorage.setItem("loggedIn", "true");
@@ -21,9 +29,9 @@ export default function Login() {
             <Flex direction="column" align="center" gap="md">
                 <Button variant="filled" size="xl" color="#f1f1f1" autoContrast leftSection={<Image src={IconEmail} w={22} h={22} />} w={350} justify="center" onClick={() => (login("email"))}>Email</Button>
 
-                <Button variant="filled" size="xl" color="#f1f1f1" autoContrast leftSection={<Image src={IconGoogle} w={20} h={20} />} w={350} justify="center"onClick={() => (login("google"))}>Google</Button>
+                <Button variant="filled" size="xl" color="#f1f1f1" autoContrast leftSection={<Image src={IconGoogle} w={20} h={20} />} w={350} justify="center" onClick={() => (login("google"))}>Google</Button>
 
-                <Button variant="filled" size="xl" color="#f1f1f1" autoContrast leftSection={<Image src={IconApple} w={20} h={20} />} w={350} justify="center"onClick={() => (login("apple"))}>Apple</Button>
+                <Button variant="filled" size="xl" color="#f1f1f1" autoContrast leftSection={<Image src={IconApple} w={20} h={20} />} w={350} justify="center" onClick={() => (login("apple"))}>Apple</Button>
             </Flex>
 
             <Divider size="xs" color="#D9D9D9" label={<Text size="md">or</Text>} labelPosition="center" />
