@@ -1,4 +1,4 @@
-import { AppShell, Burger, Avatar, Group, Title } from "@mantine/core";
+import { AppShell, Burger, Avatar, Group, Title, Button } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconUser } from "@tabler/icons-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -26,10 +26,15 @@ export default function AppShellMain({ children }: { children: React.ReactNode }
                         </Title>
                     </Link>
 
+                    {sessionStorage.getItem("loggedIn") === "true" ?
+                        <Avatar component="button" style={{ cursor: "pointer" }} ml="auto" variant="subtle" size="md" radius="xl" px="xs" onClick={() => navigate("/account")}>
+                            <IconUser />
+                        </Avatar>
+                        : <>
+                            <Button variant="subtle" ms="auto" onClick={() => (navigate("/login"))}>Log In</Button>
+                            <Button onClick={() => (navigate("/signup"))}>Sign Up</Button>
+                        </>}
 
-                    <Avatar component="button" style={{ cursor: "pointer" }} ml="auto" variant="subtle" size="md" radius="xl" px="xs" onClick={() => navigate("/account")}>
-                        <IconUser />
-                    </Avatar>
 
                     <Burger
                         opened={opened}

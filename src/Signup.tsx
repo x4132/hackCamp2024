@@ -3,9 +3,17 @@ import IconEmail from "./assets/email-icon.svg";
 import IconApple from "./assets/apple-icon.svg";
 import IconGoogle from "./assets/google-icon.png";
 import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import loggedIn from "./components/loggedIn";
 
 export default function Signup() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (loggedIn()) {
+            navigate("/search");
+        }
+    }, [navigate])
 
     function login() {
         sessionStorage.setItem("loggedIn", "true");
