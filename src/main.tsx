@@ -12,6 +12,7 @@ import Results from './Results.tsx'
 import Search from './Search.tsx'
 import Login from './Login.tsx'
 import Account from './Account.tsx'
+import Profile from './Profile.tsx'
 
 const theme = createTheme({
     fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
@@ -34,6 +35,7 @@ createRoot(document.getElementById('root')!).render(
                         <Route path="/results" element={<Results />}/>
                         <Route path="/search" element={<Search />} />
                         <Route path="/account" element={<Account />} />
+                        <Route path="/profile" element={<Profile />} />
                     </Routes>
                 </AppShellMain>
             </MantineProvider>
