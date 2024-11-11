@@ -11,7 +11,7 @@ import Signup from './Signup.tsx'
 import Results from './Results.tsx'
 import Search from './Search.tsx'
 import Login from './Login.tsx'
-import Account from './account.tsx'
+import Account from './Account.tsx'
 
 const theme = createTheme({
     fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
