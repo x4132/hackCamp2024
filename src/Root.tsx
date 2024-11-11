@@ -3,11 +3,13 @@ import { IconBrandAppleFilled } from "@tabler/icons-react";
 
 import bgVideo from "./assets/bg.mp4";
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 let timeout: number;
 
 function App() {
     const thingsToDo = ["Kitchen Remodel", "Landscaping", "New Computer", "Photo Edits", "Taxes", "Wedding", "Printer"];
+    const navigate = useNavigate();
     const carouselTransition: MantineTransition = {
         in: {
             transformOrigin: "bottom",
@@ -83,19 +85,19 @@ function App() {
                     </Flex>
                 </Group>
 
-                <Button mt={35} variant="white" c="dark" w={{ md: "25%" }} p="md" miw="12rem" size="32" radius="xl" mih="72px">
+                <Button mt={35} display={{ base: 'none', md: 'block' }} variant="white" c="dark" w={{ md: "25%" }} p="md" miw="12rem" size="32" radius="xl" mih="72px" onClick={() => navigate("/signup")}>
                     Try for Free
                 </Button>
             </Flex>
 
             <Flex direction="column" display={{ sm: "flex", md: "none" }} pos="fixed" bottom="0" w="100%" p="sm" gap="sm" align="center" >
-                <Button variant="white" c="dark" mb="0" fullWidth w={{ md: "50%", lg: "25%" }} leftSection={<IconBrandAppleFilled />} >
+                <Button variant="white" c="dark" mb="0" fullWidth w={{ md: "50%", lg: "25%" }} leftSection={<IconBrandAppleFilled />} onClick={() => (location.assign("https://appleid.apple.com/auth/authorize?client_id=WIP"))} >
                     Sign in with Apple
                 </Button>
-                <Button variant="white" c="dark" fullWidth w={{ md: "50%", lg: "25%" }} >
+                <Button variant="white" c="dark" fullWidth w={{ md: "50%", lg: "25%" }} onClick={() => navigate("/signup")} >
                     Sign Up
                 </Button>
-                <Button color="dark" fullWidth w={{ md: "50%", lg: "25%" }}>
+                <Button color="dark" fullWidth w={{ md: "50%", lg: "25%" }} onClick={() => navigate("/login")}>
                     Log In
                 </Button>
             </Flex>

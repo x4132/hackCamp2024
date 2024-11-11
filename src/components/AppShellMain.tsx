@@ -1,10 +1,12 @@
-import { AppShell, Burger, Group, Title } from "@mantine/core";
+import { AppShell, Burger, Avatar, Group, Title } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { useLocation } from "react-router-dom";
+import { IconUser } from "@tabler/icons-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function AppShellMain({ children }: { children: React.ReactNode }) {
     const [opened, { toggle }] = useDisclosure();
     const location = useLocation();
+    const navigate = useNavigate();
 
     return (
         <AppShell
@@ -18,9 +20,16 @@ export default function AppShellMain({ children }: { children: React.ReactNode }
             <AppShell.Header bg={`rgba(0,0,0,${location.pathname === "/" ? 0 : 0.5})`}>
                 <Group h="100%" px="md">
 
-                    <Title order={1} fs="italic" className="logo" display={location.pathname === "/" ? "none" : "inline"} >
-                        Quikk
-                    </Title>
+                    <Link to="/" style={{ textDecoration: "none", color: "white" }} >
+                        <Title order={1} fs="italic" className="logo" display={location.pathname === "/" ? "none" : "inline"} >
+                            Quikk
+                        </Title>
+                    </Link>
+
+
+                    <Avatar component="button" style={{ cursor: "pointer" }} ml="auto" variant="subtle" size="md" radius="xl" px="xs" onClick={() => navigate("/account")}>
+                        <IconUser />
+                    </Avatar>
 
                     <Burger
                         opened={opened}
