@@ -21,7 +21,7 @@ export default function Search() {
                 </Title>
 
                 <Group w="100%" justify="center" align="center" gap="xs">
-                    <TextInput w={{ sm: "75%", md: "50%" }} placeholder="I'm looking to do..." radius="xl" variant="filled" value={input} onChange={(evt) => (setInput(evt.target.value))} />
+                    <TextInput w={{ sm: "75%", md: "50%" }} placeholder="I'm looking to Hire..." radius="xl" variant="filled" value={input} onChange={(evt) => (setInput(evt.target.value))} />
                     <Button radius="xl" m="0" px="xs" onClick={() => searchIt(input)} >
                         <IconSearch />
                         <Text display={{ sm: "none", md: "block" }}></Text>
@@ -29,9 +29,9 @@ export default function Search() {
                 </Group>
 
                 <Group w={{ sm: "100%", md: "50%" }} justify="center" align="center" >
-                    <Button variant="light" radius="xl" onClick={(evt) => searchIt(evt.currentTarget.innerText)}>Landscaping</Button>
-                    <Button variant="light" color="grape" radius="xl" onClick={(evt) => searchIt(evt.currentTarget.innerText)}>Interior Design</Button>
-                    <Button variant="light" color="yellow" radius="xl" onClick={(evt) => searchIt(evt.currentTarget.innerText)}>Hire a Photographer</Button>
+                    <Button variant="light" radius="xl" onClick={(evt) => searchIt(evt.currentTarget.innerText)}>Landscapers</Button>
+                    <Button variant="light" color="grape" radius="xl" onClick={(evt) => searchIt(evt.currentTarget.innerText)}>Interior Designers</Button>
+                    <Button variant="light" color="yellow" radius="xl" onClick={(evt) => searchIt(evt.currentTarget.innerText)}>Photographers</Button>
                 </Group>
             </Flex>
         </>

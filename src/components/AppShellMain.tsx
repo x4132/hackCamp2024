@@ -27,9 +27,12 @@ export default function AppShellMain({ children }: { children: React.ReactNode }
                     </Link>
 
                     {sessionStorage.getItem("loggedIn") === "true" ?
-                        <Avatar component="button" style={{ cursor: "pointer" }} ml="auto" variant="subtle" size="md" radius="xl" px="xs" onClick={() => navigate("/account")}>
-                            <IconUser />
-                        </Avatar>
+                        <>
+                            <Button variant="subtle" size="xs" px="xs" ms="auto" onClick={() => (navigate("/search"))}>Search</Button>
+                            <Avatar component="button" style={{ cursor: "pointer" }} variant="subtle" size="md" radius="xl" px="xs" onClick={() => navigate("/account")}>
+                                <IconUser />
+                            </Avatar>
+                        </>
                         : <>
                             <Button variant="subtle" ms="auto" onClick={() => (navigate("/login"))}>Log In</Button>
                             <Button onClick={() => (navigate("/signup"))}>Sign Up</Button>
