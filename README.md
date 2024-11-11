@@ -21,15 +21,15 @@
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 
-Traditional job platforms can be impersonal and often overlook inclusivity. Many candidates, especially from underrepresented backgrounds, struggle to find opportunities that align with their skills and values. Our solution is an AI-powered, swipe-based app that connects job seekers and employers based on a mutual fit, promoting accessible and inclusive hiring.
+Current hiring platforms can feel impersonal, making it hard for employers and job seekers to find the right match efficiently. Our app addresses this by providing a swipe-based, AI-driven platform that quickly connects candidates and employers based on skills and fit, simplifying the hiring process.
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-The solution is an AI-powered, swipe-based job matching app that connects candidates and employers based on skills, values, and inclusivity. It simplifies hiring, helping diverse talent find suitable roles and employers to build inclusive teams, all within an accessible, user-friendly platform.
+The solution is an AI-powered, swipe-based job matching app that connects candidates and employers based on skills and values. It simplifies hiring, helping talent find suitable roles and employers to build teams, all within an accessible, user-friendly platform.
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-... what we couldn't finish
+With the limited time, there was only so much we could implement; currently this servers best as a proof of concept.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
