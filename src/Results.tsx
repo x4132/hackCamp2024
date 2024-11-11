@@ -1,4 +1,5 @@
 import { Flex, TextInput } from "@mantine/core";
+import { IconSearch } from "@tabler/icons-react";
 
 export default function Results() {
     return (
@@ -15,8 +16,8 @@ export default function Results() {
                 align="center"
             >
                 <TextInput
+                    leftSection={<IconSearch size={16} />}
                     w="1000vw"
-                    h="10vh"
                     pl="20px"
                     pr="20px"
                     placeholder="<ai summary of search>" 
