@@ -5,7 +5,7 @@ import { useDisclosure } from '@mantine/hooks';
 import DefaultPfp from "./assets/default-pfp.jpg";
 
 export default function Profile() {
-    const [visible, setVisible] = useState(true);
+    const [visible] = useState(true);
     const [opened, { open, close }] = useDisclosure(false);
 
     return (
